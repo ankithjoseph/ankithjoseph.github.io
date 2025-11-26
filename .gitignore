@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+bin/
+public/resume.pdf
+.env
+.DS_Store
+.venv/
+.vscode/
+typst/cv.pdf
+(24) The Graduate CV in 2025_ Plain, Clear, Impact-Led _ LinkedIn.pdf

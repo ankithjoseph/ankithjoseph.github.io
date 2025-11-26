@@ -1,0 +1,153 @@
+name: "Ankith Babu Joseph"
+title: "Data Analyst"
+email: "ankithbjoseph@gmail.com"
+phone: "+353 89 983 2315"
+website: "https://ankithbjoseph.github.io"
+github: "github.com/ankithbjoseph"
+linkedin: "linkedin.com/in/ankith-b-joseph"
+location: "Dublin, Ireland"
+
+summary: |
+  Data Analyst with a Master’s in Data Analytics (1:1) and a strong background in banking operations. Expert in Python, R, and SQL for data cleaning, analysis, and visualization. Proven track record of improving operational efficiency and leading teams in high-pressure environments. Passionate about leveraging data to drive strategic decision-making and business growth.
+
+skills:
+  - category: "Data Analysis & Programming"
+    items:
+      [
+        "Python (Pandas, NumPy, Scikit-learn)",
+        "R",
+        "SQL",
+        "Tableau",
+        "Power BI",
+      ]
+  - category: "Web Technologies"
+    items: ["HTML5", "CSS3", "JavaScript", "Git/GitHub"]
+  - category: "Tools & Software"
+    items:
+      [
+        "Microsoft Excel (Advanced)",
+        "Visual Studio Code",
+        "Jupyter Notebooks",
+        "Adobe Photoshop",
+      ]
+  - category: "Soft Skills"
+    items:
+      [
+        "Strategic Planning",
+        "Team Leadership",
+        "Stakeholder Management",
+        "Problem Solving",
+      ]
+  - category: "Languages"
+    items: ["English (Fluent)", "Malayalam (Native)"]
+
+experience:
+  - role: "Administrative Assistant - Data"
+    company: "Nexus Ventures Limited"
+    companyUrl: "https://nexusventures.eu/"
+    location: "Dublin, Ireland"
+    start: "Feb 2025"
+    end: "Present"
+    tags: ["Python", "Excel", "Data Analysis", "Automation"]
+    description: |
+      - Streamlining administrative workflows by implementing automated data processing scripts, reducing reporting time by 20%.
+      - Utilizing Python and Excel to analyze operational data, identifying key trends that support strategic resource allocation.
+      - Maintaining data integrity across internal databases through rigorous cleaning and validation protocols.
+
+  - role: "Laboratory Assistant - Data Analytics"
+    company: "National College of Ireland"
+    companyUrl: "https://www.ncirl.ie/"
+    location: "Dublin, Ireland"
+    start: "Sep 2024"
+    end: "Jan 2025"
+    tags: ["Python", "R", "Machine Learning", "Teaching", "Data Visualization"]
+    description: |
+      - Mentored 50+ MSc students in advanced data analytics concepts, including machine learning algorithms and statistical modeling in Python and R.
+      - Facilitated weekly practical sessions, ensuring 100% of students successfully completed complex data visualization projects.
+      - Collaborated with faculty to refine course materials, ensuring alignment with current industry standards and tools.
+
+  - role: "Assistant Manager"
+    company: "The Federal Bank Ltd."
+    companyUrl: "https://www.federalbank.co.in/"
+    location: "Kerala, India"
+    start: "Oct 2022"
+    end: "Apr 2023"
+    tags: ["Team Leadership", "Operations", "Banking", "Compliance"]
+    description: |
+      - Co-managed branch operations, overseeing a portfolio of high-value accounts and ensuring seamless service delivery.
+      - Led a team of 5 associates, implementing performance tracking systems that increased team productivity by 15%.
+      - Achieved 100% compliance with banking regulations and audit requirements through meticulous record-keeping and process oversight.
+
+  - role: "Customer Associate"
+    company: "The Federal Bank Ltd."
+    companyUrl: "https://www.federalbank.co.in/"
+    location: "Kerala, India"
+    start: "Jul 2015"
+    end: "Oct 2022"
+    tags: ["Customer Service", "Banking Operations", "Cash Management"]
+    description: |
+      - Processed an average of 150+ daily transactions with 99.9% accuracy, consistently exceeding operational targets.
+      - Resolved complex customer issues, maintaining a high customer satisfaction score and fostering long-term client relationships.
+      - Managed cash logistics and vault operations, ensuring strict adherence to security protocols and zero discrepancies.
+
+education:
+  - degree: "MSc in Data Analytics"
+    institution: "National College of Ireland"
+    institutionUrl: "https://www.ncirl.ie/"
+    location: "Dublin, Ireland"
+    year: "2024 - 2025"
+    tags: ["Machine Learning", "Data Mining", "Statistics", "Python", "R"]
+    description: "First-Class Honours (1:1)"
+
+  - degree: "B.Tech in Mechanical Engineering"
+    institution: "Federal Institute of Science And Technology"
+    institutionUrl: "https://fisat.ac.in/"
+    location: "Kerala, India"
+    year: "2011 - 2015"
+    tags: ["Engineering Mathematics", "Systems Analysis", "Problem Solving"]
+    description: "CGPA: 7.56/10"
+
+certifications:
+  - name: "CAIIB (Information Technology)"
+    issuer: "Indian Institute of Banking & Finance"
+    date: "Jul 2018"
+  - name: "JAIIB"
+    issuer: "Indian Institute of Banking & Finance"
+    date: "Dec 2017"
+
+projects:
+  - name: "Predictive Analytics for Churn"
+    slug: "predictive-analytics-churn-1"
+    image: "https://www.datascienceportfol.io/static/profile_pics/pr3_292783CB9B6772E84A42.png"
+    url: "https://github.com/ankithbjoseph"
+    demo: "https://ankithbjoseph.github.io"
+    tags: ["Machine Learning", "Python", "Scikit-learn", "Power BI"]
+    date: "2024"
+    description: "Developed a machine learning model using Python (Scikit-learn) to predict customer churn in the banking sector. Achieved 85% accuracy using Random Forest and Logistic Regression algorithms. Visualized key churn drivers using Power BI dashboards."
+    longDescription: |
+      This project focuses on predicting customer churn in the banking sector using machine learning techniques. The goal was to identify customers who are likely to leave the bank, enabling proactive retention strategies.
+
+      The project involved extensive data preprocessing, feature engineering, and model selection to achieve optimal prediction accuracy. Multiple algorithms were evaluated and compared to find the best performing model.
+
+  - name: "Sales Performance Dashboard"
+    slug: "sales-performance-dashboard"
+    url: "https://github.com/ankithbjoseph"
+    demo: "https://ankithbjoseph.github.io"
+    tags: ["Data Visualization", "SQL", "Tableau"]
+    date: "2024"
+    description: "Designed an interactive dashboard in Tableau to track regional sales performance. Integrated SQL data sources to provide real-time insights, enabling management to identify underperforming regions and optimize inventory."
+    longDescription: |
+      This comprehensive sales analytics dashboard was designed to provide management with real-time visibility into regional sales performance across multiple dimensions.
+
+      The solution integrates data from multiple SQL databases and presents it through intuitive Tableau visualizations, enabling quick decision-making and strategic planning.
+    # features:
+    #   - test
+
+  - name: "Predictive Analytics Churn"
+    slug: "predictive-analytics-churn"
+    image: "https://www.datascienceportfol.io/static/profile_pics/pr3_292783CB9B6772E84A42.png"
+    url: "https://github.com/ankithbjoseph"
+    demo: "https://ankithbjoseph.github.io"
+    tags: ["Machine Learning", "Python", "Scikit-learn", "Power BI"]
+    date: "2024"
+    description: "Developed a machine learning model using Python (Scikit-learn) to predict customer churn in the banking sector. Achieved 85% accuracy using Random Forest and Logistic Regression algorithms. Visualized key churn drivers using Power BI dashboards."
