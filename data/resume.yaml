@@ -24,12 +24,7 @@ skills:
     items: ["HTML5", "CSS3", "JavaScript", "Git/GitHub"]
   - category: "Tools & Software"
     items:
-      [
-        "Microsoft Excel (Advanced)",
-        "Visual Studio Code",
-        "Jupyter Notebooks",
-        "Adobe Photoshop",
-      ]
+      ["Microsoft Excel (Advanced)", "Visual Studio Code", "Jupyter Notebooks"]
   - category: "Soft Skills"
     items:
       [
