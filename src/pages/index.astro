@@ -37,7 +37,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {resumeData.projects.map((project, index) => (
                     <a
-                      href={`/projects/${
+                      href={`${import.meta.env.BASE_URL}projects/${
                         project.slug ||
                         project.name
                           .toLowerCase()
