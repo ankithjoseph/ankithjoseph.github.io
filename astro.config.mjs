@@ -8,5 +8,5 @@ export default defineConfig({
     domains: ["www.datascienceportfol.io"],
   },
   site: 'https://ankithbjoseph.github.io',
-  base: '/protfolio-personal/',
+  base: '/',
 });
