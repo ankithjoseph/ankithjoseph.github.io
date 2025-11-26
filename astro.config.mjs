@@ -7,6 +7,6 @@ export default defineConfig({
   image: {
     domains: ["www.datascienceportfol.io"],
   },
-  site: 'https://ankithbjoseph.github.io',
+  site: 'https://ankithjoseph.github.io',
   base: '/',
 });
