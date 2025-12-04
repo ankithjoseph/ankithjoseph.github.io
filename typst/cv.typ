@@ -117,7 +117,12 @@
 #if "projects" in resume {
   section_title("Key Projects")
   for proj in resume.projects {
-    project_item(proj.name, proj.url, proj.description)
+    // Some project entries may not define a url; guard access
+    project_item(
+      proj.name,
+      if "url" in proj { proj.url } else { none },
+      proj.description,
+    )
   }
 }
 

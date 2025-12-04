@@ -1,6 +1,5 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { Image } from "astro:assets";
 import fs from "fs";
 import yaml from "js-yaml";
 import Sidebar from "../../components/Sidebar.astro";
@@ -93,13 +92,14 @@ const gradient = gradientColors[projectIndex % gradientColors.length];
             {/* Project Image/Banner */}
             {
               project.image && (
-                <div class="rounded-2xl overflow-hidden mb-10">
-                  <Image
+                <div class="rounded-2xl overflow-hidden mb-10 aspect-[10/3] bg-slate-100 border-b border-slate-100 flex items-center justify-center">
+                  <img
                     src={project.image}
                     alt={`${project.name} preview`}
-                    inferSize={true}
-                    loading="lazy"
-                    class="w-full h-auto"
+                    loading="eager"
+                    width="800"
+                    height="240"
+                    class="w-full h-full object-cover"
                   />
                 </div>
               )

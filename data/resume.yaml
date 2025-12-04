@@ -8,7 +8,7 @@ linkedin: "linkedin.com/in/ankith-b-joseph"
 location: "Dublin, Ireland"
 
 summary: |
-  Data Analyst with a Master’s in Data Analytics (1:1) and a strong background in banking operations. Expert in Python, R, and SQL for data cleaning, analysis, and visualization. Proven track record of improving operational efficiency and leading teams in high-pressure environments. Passionate about leveraging data to drive strategic decision-making and business growth.
+  Master's in Data Analytics graduate with 8+ years of professional experience in banking and data operations. Proficient in Python, R, SQL, Tableau, and Power BI. Skilled at turning data into clear insights that support business decisions and improve efficiency.
 
 skills:
   - category: "Data Analysis & Programming"
@@ -111,38 +111,19 @@ certifications:
     date: "Dec 2017"
 
 projects:
-  - name: "Predictive Analytics for Churn"
-    slug: "predictive-analytics-churn-1"
-    image: "https://www.datascienceportfol.io/static/profile_pics/pr3_292783CB9B6772E84A42.png"
-    url: "https://github.com/ankithbjoseph"
-    demo: "https://ankithbjoseph.github.io"
-    tags: ["Machine Learning", "Python", "Scikit-learn", "Power BI"]
+  - name: "Air Quality Index Forecasting using VMD-FAN Hybrid Model"
+    slug: "aqi-forecasting-vmd-fan"
+    image: "/images/aqi-forecasting.png"
+    url: "https://github.com/ankithbjoseph/vmd-fan"
+    demo: "https://norma.ncirl.ie/8677/"
+    tags:
+      ["Machine Learning", "Python", "Time Series", "VMD", "FAN", "Research"]
     date: "2024"
-    description: "Developed a machine learning model using Python (Scikit-learn) to predict customer churn in the banking sector. Achieved 85% accuracy using Random Forest and Logistic Regression algorithms. Visualized key churn drivers using Power BI dashboards."
+    description: "Master's thesis developing a novel hybrid model combining Variational Mode Decomposition (VMD) and Fourier Analysis Networks (FAN) for accurate Air Quality Index forecasting. Achieved 1.49% MAPE on Taiwan air quality data, outperforming baseline models."
     longDescription: |
-      This project focuses on predicting customer churn in the banking sector using machine learning techniques. The goal was to identify customers who are likely to leave the bank, enabling proactive retention strategies.
+      This research project proposes a novel VMD-FAN hybrid model for forecasting Air Quality Index (AQI) time series data. The model addresses the complexity and non-stationary nature of AQI data by combining two powerful techniques:
 
-      The project involved extensive data preprocessing, feature engineering, and model selection to achieve optimal prediction accuracy. Multiple algorithms were evaluated and compared to find the best performing model.
+      - Variational Mode Decomposition (VMD) for handling noise and decomposing the signal into Intrinsic Mode Functions (IMFs)
+      - Fourier Analysis Networks (FAN) for capturing periodicity patterns in the data
 
-  - name: "Sales Performance Dashboard"
-    slug: "sales-performance-dashboard"
-    url: "https://github.com/ankithbjoseph"
-    demo: "https://ankithbjoseph.github.io"
-    tags: ["Data Visualization", "SQL", "Tableau"]
-    date: "2024"
-    description: "Designed an interactive dashboard in Tableau to track regional sales performance. Integrated SQL data sources to provide real-time insights, enabling management to identify underperforming regions and optimize inventory."
-    longDescription: |
-      This comprehensive sales analytics dashboard was designed to provide management with real-time visibility into regional sales performance across multiple dimensions.
-
-      The solution integrates data from multiple SQL databases and presents it through intuitive Tableau visualizations, enabling quick decision-making and strategic planning.
-    # features:
-    #   - test
-
-  - name: "Predictive Analytics Churn"
-    slug: "predictive-analytics-churn"
-    image: "https://www.datascienceportfol.io/static/profile_pics/pr3_292783CB9B6772E84A42.png"
-    url: "https://github.com/ankithbjoseph"
-    demo: "https://ankithbjoseph.github.io"
-    tags: ["Machine Learning", "Python", "Scikit-learn", "Power BI"]
-    date: "2024"
-    description: "Developed a machine learning model using Python (Scikit-learn) to predict customer churn in the banking sector. Achieved 85% accuracy using Random Forest and Logistic Regression algorithms. Visualized key churn drivers using Power BI dashboards."
+      The model was tested on air quality data from Taiwan's Annan district, achieving impressive performance metrics: MAE of 0.72, MSE of 1.35, RMSE of 1.16, and MAPE of 1.49%. The model's generalizability was validated through extension analysis on different cities in Taiwan, demonstrating its robustness and practical applicability in environmental monitoring.
