@@ -127,3 +127,28 @@ projects:
       - Fourier Analysis Networks (FAN) for capturing periodicity patterns in the data
 
       The model was tested on air quality data from Taiwan's Annan district, achieving impressive performance metrics: MAE of 0.72, MSE of 1.35, RMSE of 1.16, and MAPE of 1.49%. The model's generalizability was validated through extension analysis on different cities in Taiwan, demonstrating its robustness and practical applicability in environmental monitoring.
+
+  - name: "Environmental Impact on Dublin Pedestrian Footfall"
+    slug: "dublin-pedestrian-footfall-analysis"
+    image: "/images/dap-dashboard.png"
+    url: "https://github.com/ankithbjoseph/TeamAA_DAP_JAN2024"
+    demo: "https://dashboard.projectdap.ankithjoseph.com/dashboard"
+    tags:
+      [
+        "Data Analytics",
+        "Python",
+        "Dashboard",
+        "Environmental Data",
+        "Visualization",
+        "Team Project",
+      ]
+    date: "2024"
+    description: "Interactive dashboard exploring the relationship between environmental factors (weather, air quality) and pedestrian footfall across 20+ Dublin city locations. Analyzed temperature, humidity, precipitation, AQI metrics, and pedestrian counter data."
+    longDescription: |
+      A collaborative Data Analytics Project (DAP) that investigates how environmental conditions influence pedestrian movement patterns in Dublin city. The project features an interactive dashboard built to visualize and analyze:
+
+      - Environmental variables: Temperature, relative humidity, dew point, apparent temperature, precipitation, rain, snowfall, cloud cover, wind speed, and sunshine duration
+      - Air Quality metrics: PM10, PM2.5, Carbon Monoxide, Nitrogen Dioxide, Sulphur Dioxide, Dust concentrations, and European Air Quality Index (AQI) calculations
+      - Pedestrian counter data from 20+ strategic Dublin locations including Grafton Street, O'Connell Street, College Green, and Grand Canal areas
+
+      The dashboard enables users to explore relationships between variables, analyze distribution patterns, and understand how weather and air quality impact urban pedestrian activity. Built as a team project with Alphons Zacharia James and Abhilash Janardhanan.
