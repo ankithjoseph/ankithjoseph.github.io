@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: "Ankith Babu Joseph"
 title: "Data Analyst"
 email: "ankithbjoseph@gmail.com"
@@ -7,6 +8,16 @@ github: "github.com/ankithbjoseph"
 linkedin: "linkedin.com/in/ankith-b-joseph"
 location: "Dublin, Ireland"
 
+=======
+name: Ankith Babu Joseph
+title: Data Analyst
+email: ankithbjoseph@gmail.com
+phone: +353 89 983 2315
+website: https://cv.ankithjoseph.com
+github: github.com/ankithbjoseph
+linkedin: linkedin.com/in/ankith-b-joseph
+location: Dublin, Ireland
+>>>>>>> 76bbe3a673a661722e56967b86e30185b1ce5a07
 summary: |
   Master's in Data Analytics graduate with 8+ years of professional experience in banking and data operations. Proficient in Python, R, SQL, Tableau, and Power BI. Skilled at turning data into clear insights that support business decisions and improve efficiency.
 skills:
