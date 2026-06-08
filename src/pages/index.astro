@@ -7,7 +7,7 @@ import Sidebar from "../components/Sidebar.astro";
 import Tag from "../components/Tag.astro";
 
 // Load data at build time
-const resumeData = yaml.load(fs.readFileSync("data/resume.yaml", "utf8"));
+const resumeData = yaml.load(fs.readFileSync("data/resume.yaml", "utf8")) as any;
 
 // Solid background color classes for placeholders (professional palette)
 const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
@@ -35,7 +35,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                 </h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {resumeData.projects.map((project, index) => (
+                  {resumeData.projects.map((project: any, index: number) => (
                     <a
                       href={`${import.meta.env.BASE_URL}projects/${
                         project.slug ||
@@ -44,6 +44,8 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                           .replace(/[^a-z0-9]+/g, "-")
                           .replace(/(^-|-$)/g, "")
                       }`}
+                      data-stagger
+                      style={`--i: ${index}`}
                       class="group flex flex-col bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-lg hover:border-slate-300 transition-all duration-300 h-full"
                     >
                       {/* Project Image */}
@@ -55,7 +57,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                             width={800}
                             height={240}
                             loading={index < 5 ? "eager" : "lazy"}
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            class="w-full h-full object-cover"
                           />
                           <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
                         </div>
@@ -89,7 +91,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                           {/* Tech Tags */}
                           {project.tags && project.tags.length > 0 && (
                             <div class="flex flex-wrap gap-1.5">
-                              {project.tags.slice(0, 3).map((tag) => (
+                              {project.tags.slice(0, 3).map((tag: any) => (
                                 <Tag>{tag}</Tag>
                               ))}
                               {project.tags.length > 3 && (
@@ -139,8 +141,8 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
             </h2>
             <div class="space-y-10">
               {
-                resumeData.experience.map((job) => (
-                  <div class="group relative pl-8 border-l-2 border-slate-200 hover:border-blue-400 transition-colors">
+                resumeData.experience.map((job: any) => (
+                  <div data-reveal-left class="group relative pl-8 border-l-2 border-slate-200 hover:border-blue-400 transition-colors">
                     <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-white border-2 border-slate-300 group-hover:border-blue-500 group-hover:bg-blue-50 transition-colors" />
                     <span class="text-sm font-medium text-blue-600">
                       {job.start} - {job.end === "Present" ? "now" : job.end}
@@ -183,7 +185,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                     {/* Skills tags */}
                     {job.tags && job.tags.length > 0 && (
                       <div class="flex flex-wrap gap-2 mt-4">
-                        {job.tags.map((tag) => (
+                        {job.tags.map((tag: any) => (
                           <Tag>{tag}</Tag>
                         ))}
                       </div>
@@ -206,8 +208,8 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
             </h2>
             <div class="space-y-10">
               {
-                resumeData.education.map((edu) => (
-                  <div class="group relative pl-8 border-l-2 border-slate-200 hover:border-blue-400 transition-colors">
+                resumeData.education.map((edu: any) => (
+                  <div data-reveal-left class="group relative pl-8 border-l-2 border-slate-200 hover:border-blue-400 transition-colors">
                     <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-white border-2 border-slate-300 group-hover:border-blue-500 group-hover:bg-blue-50 transition-colors" />
                     <span class="text-sm font-medium text-blue-600">
                       {edu.year}
@@ -249,7 +251,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                     </p>
                     {edu.tags && edu.tags.length > 0 && (
                       <div class="flex flex-wrap gap-2 mt-4">
-                        {edu.tags.map((tag) => (
+                        {edu.tags.map((tag: any) => (
                           <Tag>{tag}</Tag>
                         ))}
                       </div>
@@ -272,12 +274,14 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                     Certifications
                   </h2>
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {resumeData.certifications.map((cert) =>
+                    {resumeData.certifications.map((cert: any, index: number) =>
                       cert.link ? (
                         <a
                           href={cert.link}
                           target="_blank"
                           rel="noopener noreferrer"
+                          data-reveal-stagger
+                          style={`--i: ${index % 2}`}
                           class="p-5 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl border border-slate-200 hover:shadow-md transition-shadow hover:translate-x-0.5 group"
                           aria-label={`Open certificate: ${cert.name}`}
                         >
@@ -313,7 +317,11 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                           </div>
                         </a>
                       ) : (
-                        <div class="p-5 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
+                        <div
+                          data-reveal-stagger
+                          style={`--i: ${index % 2}`}
+                          class="p-5 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl border border-slate-200 hover:shadow-md transition-shadow"
+                        >
                           <h3 class="font-semibold text-slate-900">
                             {cert.name}
                           </h3>
