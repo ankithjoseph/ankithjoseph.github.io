@@ -1,125 +1,148 @@
-name: "Ankith Babu Joseph"
-title: "Data Analyst"
-email: "ankithbjoseph@gmail.com"
-phone: "+353 89 983 2315"
-website: "https://ankithbjoseph.github.io"
-github: "github.com/ankithbjoseph"
-linkedin: "linkedin.com/in/ankith-b-joseph"
-location: "Dublin, Ireland"
-
+name: Ankith Babu Joseph
+title: Data Analyst
+email: ankithbjoseph@gmail.com
+phone: +353 89 983 2315
+website: https://ankithbjoseph.com
+github: github.com/ankithbjoseph
+linkedin: linkedin.com/in/ankith-b-joseph
+location: Dublin, Ireland
 summary: |
   Master's in Data Analytics graduate with 8+ years of professional experience in banking and data operations. Proficient in Python, R, SQL, Tableau, and Power BI. Skilled at turning data into clear insights that support business decisions and improve efficiency.
-
 skills:
-  - category: "Data Analysis & Programming"
+  - category: Data Analysis & Programming
     items:
-      [
-        "Python (Pandas, NumPy, Scikit-learn)",
-        "R",
-        "SQL",
-        "Tableau",
-        "Power BI",
-      ]
-  - category: "Web Technologies"
-    items: ["HTML5", "CSS3", "JavaScript", "Git/GitHub"]
-  - category: "Tools & Software"
+      - Python (Pandas, NumPy, Scikit-learn)
+      - R
+      - SQL
+      - Tableau
+      - Power BI
+  - category: Web Technologies
     items:
-      ["Microsoft Excel (Advanced)", "Visual Studio Code", "Jupyter Notebooks"]
-  - category: "Soft Skills"
+      - HTML5
+      - CSS3
+      - JavaScript
+      - Git/GitHub
+  - category: Tools & Software
     items:
-      [
-        "Strategic Planning",
-        "Team Leadership",
-        "Stakeholder Management",
-        "Problem Solving",
-      ]
-  - category: "Languages"
-    items: ["English (Fluent)", "Malayalam (Native)"]
-
+      - Microsoft Excel (Advanced)
+      - Visual Studio Code
+      - Jupyter Notebooks
+  - category: Soft Skills
+    items:
+      - Strategic Planning
+      - Team Leadership
+      - Stakeholder Management
+      - Problem Solving
+  - category: Languages
+    items:
+      - English (Fluent)
+      - Malayalam (Native)
 experience:
-  - role: "Administrative Assistant - Data"
-    company: "Nexus Ventures Limited"
-    companyUrl: "https://nexusventures.eu/"
-    location: "Dublin, Ireland"
-    start: "Feb 2025"
-    end: "Present"
-    tags: ["Python", "Excel", "Data Analysis", "Automation"]
+  - role: Administrative Assistant - Data
+    company: Nexus Ventures Limited
+    companyUrl: https://nexusventures.eu/
+    location: Dublin, Ireland
+    start: Feb 2025
+    end: Present
+    tags:
+      - Python
+      - Excel
+      - Data Analysis
+      - Automation
     description: |
       - Streamlining administrative workflows by implementing automated data processing scripts, reducing reporting time by 20%.
       - Utilizing Python and Excel to analyze operational data, identifying key trends that support strategic resource allocation.
       - Maintaining data integrity across internal databases through rigorous cleaning and validation protocols.
-
-  - role: "Laboratory Assistant - Data Analytics"
-    company: "National College of Ireland"
-    companyUrl: "https://www.ncirl.ie/"
-    location: "Dublin, Ireland"
-    start: "Sep 2024"
-    end: "Jan 2025"
-    tags: ["Python", "R", "Machine Learning", "Teaching", "Data Visualization"]
+  - role: Laboratory Assistant - Data Analytics
+    company: National College of Ireland
+    companyUrl: https://www.ncirl.ie/
+    location: Dublin, Ireland
+    start: Sep 2024
+    end: Jan 2025
+    tags:
+      - Python
+      - R
+      - Machine Learning
+      - Teaching
+      - Data Visualization
     description: |
       - Mentored 50+ MSc students in advanced data analytics concepts, including machine learning algorithms and statistical modeling in Python and R.
       - Facilitated weekly practical sessions, ensuring 100% of students successfully completed complex data visualization projects.
       - Collaborated with faculty to refine course materials, ensuring alignment with current industry standards and tools.
-
-  - role: "Assistant Manager"
-    company: "The Federal Bank Ltd."
-    companyUrl: "https://www.federalbank.co.in/"
-    location: "Kerala, India"
-    start: "Oct 2022"
-    end: "Apr 2023"
-    tags: ["Team Leadership", "Operations", "Banking", "Compliance"]
+  - role: Assistant Manager
+    company: The Federal Bank Ltd.
+    companyUrl: https://www.federalbank.co.in/
+    location: Kerala, India
+    start: Oct 2022
+    end: Apr 2023
+    tags:
+      - Team Leadership
+      - Operations
+      - Banking
+      - Compliance
     description: |
       - Co-managed branch operations, overseeing a portfolio of high-value accounts and ensuring seamless service delivery.
       - Led a team of 5 associates, implementing performance tracking systems that increased team productivity by 15%.
       - Achieved 100% compliance with banking regulations and audit requirements through meticulous record-keeping and process oversight.
-
-  - role: "Customer Associate"
-    company: "The Federal Bank Ltd."
-    companyUrl: "https://www.federalbank.co.in/"
-    location: "Kerala, India"
-    start: "Jul 2015"
-    end: "Oct 2022"
-    tags: ["Customer Service", "Banking Operations", "Cash Management"]
+  - role: Customer Associate
+    company: The Federal Bank Ltd.
+    companyUrl: https://www.federalbank.co.in/
+    location: Kerala, India
+    start: Jul 2015
+    end: Oct 2022
+    tags:
+      - Customer Service
+      - Banking Operations
+      - Cash Management
     description: |
       - Processed an average of 150+ daily transactions with 99.9% accuracy, consistently exceeding operational targets.
       - Resolved complex customer issues, maintaining a high customer satisfaction score and fostering long-term client relationships.
       - Managed cash logistics and vault operations, ensuring strict adherence to security protocols and zero discrepancies.
-
 education:
-  - degree: "MSc in Data Analytics"
-    institution: "National College of Ireland"
-    institutionUrl: "https://www.ncirl.ie/"
-    location: "Dublin, Ireland"
-    year: "2024 - 2025"
-    tags: ["Machine Learning", "Data Mining", "Statistics", "Python", "R"]
-    description: "First-Class Honours (1:1)"
-
-  - degree: "B.Tech in Mechanical Engineering"
-    institution: "Federal Institute of Science And Technology"
-    institutionUrl: "https://fisat.ac.in/"
-    location: "Kerala, India"
-    year: "2011 - 2015"
-    tags: ["Engineering Mathematics", "Systems Analysis", "Problem Solving"]
-    description: "CGPA: 7.56/10"
-
-certifications:
-  - name: "CAIIB (Information Technology)"
-    issuer: "Indian Institute of Banking & Finance"
-    date: "Jul 2018"
-  - name: "JAIIB"
-    issuer: "Indian Institute of Banking & Finance"
-    date: "Dec 2017"
-
-projects:
-  - name: "Air Quality Index Forecasting using VMD-FAN Hybrid Model"
-    slug: "aqi-forecasting-vmd-fan"
-    image: "/images/aqi-forecasting.png"
-    url: "https://github.com/ankithbjoseph/vmd-fan"
-    demo: "https://norma.ncirl.ie/8677/"
+  - degree: MSc in Data Analytics
+    institution: National College of Ireland
+    institutionUrl: https://www.ncirl.ie/
+    location: Dublin, Ireland
+    year: 2024 - 2025
     tags:
-      ["Machine Learning", "Python", "Time Series", "VMD", "FAN", "Research"]
-    date: "2024"
-    description: "Master's thesis developing a novel hybrid model combining Variational Mode Decomposition (VMD) and Fourier Analysis Networks (FAN) for accurate Air Quality Index forecasting. Achieved 1.49% MAPE on Taiwan air quality data, outperforming baseline models."
+      - Machine Learning
+      - Data Mining
+      - Statistics
+      - Python
+      - R
+    description: First-Class Honours (1:1)
+  - degree: B.Tech in Mechanical Engineering
+    institution: Federal Institute of Science And Technology
+    institutionUrl: https://fisat.ac.in/
+    location: Kerala, India
+    year: 2011 - 2015
+    tags:
+      - Engineering Mathematics
+      - Systems Analysis
+      - Problem Solving
+    description: 'CGPA: 7.56/10'
+certifications:
+  - name: CAIIB (Information Technology)
+    issuer: Indian Institute of Banking & Finance
+    date: Jul 2018
+  - name: JAIIB
+    issuer: Indian Institute of Banking & Finance
+    date: Dec 2017
+projects:
+  - name: Air Quality Index Forecasting using VMD-FAN Hybrid Model
+    slug: aqi-forecasting-vmd-fan
+    image: /images/aqi-forecasting.png
+    url: https://github.com/ankithbjoseph/vmd-fan
+    demo: https://norma.ncirl.ie/8677/
+    tags:
+      - Machine Learning
+      - Python
+      - Time Series
+      - VMD
+      - FAN
+      - Research
+    date: '2024'
+    description: Master's thesis developing a novel hybrid model combining Variational Mode Decomposition (VMD) and Fourier Analysis Networks (FAN) for accurate Air Quality Index forecasting. Achieved 1.49% MAPE on Taiwan air quality data, outperforming baseline models.
     longDescription: |
       This research project proposes a novel VMD-FAN hybrid model for forecasting Air Quality Index (AQI) time series data. The model addresses the complexity and non-stationary nature of AQI data by combining two powerful techniques:
 
@@ -127,23 +150,20 @@ projects:
       - Fourier Analysis Networks (FAN) for capturing periodicity patterns in the data
 
       The model was tested on air quality data from Taiwan's Annan district, achieving impressive performance metrics: MAE of 0.72, MSE of 1.35, RMSE of 1.16, and MAPE of 1.49%. The model's generalizability was validated through extension analysis on different cities in Taiwan, demonstrating its robustness and practical applicability in environmental monitoring.
-
-  - name: "Environmental Impact on Dublin Pedestrian Footfall"
-    slug: "dublin-pedestrian-footfall-analysis"
-    image: "/images/dap-dashboard.png"
-    url: "https://github.com/ankithbjoseph/TeamAA_DAP_JAN2024"
-    demo: "https://dashboard.projectdap.ankithjoseph.com/dashboard"
+  - name: Environmental Impact on Dublin Pedestrian Footfall
+    slug: dublin-pedestrian-footfall-analysis
+    image: /images/dap-dashboard.png
+    url: https://github.com/ankithbjoseph/TeamAA_DAP_JAN2024
+    demo: https://dashboard.projectdap.ankithjoseph.com/dashboard
     tags:
-      [
-        "Data Analytics",
-        "Python",
-        "Dashboard",
-        "Environmental Data",
-        "Visualization",
-        "Team Project",
-      ]
-    date: "2024"
-    description: "Interactive dashboard exploring the relationship between environmental factors (weather, air quality) and pedestrian footfall across 20+ Dublin city locations. Analyzed temperature, humidity, precipitation, AQI metrics, and pedestrian counter data."
+      - Data Analytics
+      - Python
+      - Dashboard
+      - Environmental Data
+      - Visualization
+      - Team Project
+    date: '2024'
+    description: Interactive dashboard exploring the relationship between environmental factors (weather, air quality) and pedestrian footfall across 20+ Dublin city locations. Analyzed temperature, humidity, precipitation, AQI metrics, and pedestrian counter data.
     longDescription: |
       A collaborative Data Analytics Project (DAP) that investigates how environmental conditions influence pedestrian movement patterns in Dublin city. The project features an interactive dashboard built to visualize and analyze:
 
