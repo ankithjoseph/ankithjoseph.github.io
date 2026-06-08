@@ -1,13 +1,11 @@
 node_modules/
 dist/
 .astro/
-bin/
 public/*_1-1_Graduate.pdf
 .env
 .DS_Store
 .venv/
 .vscode/
-typst/cv.pdf
 .impeccable/
 DESIGN.md
 PRODUCT.md

@@ -2,7 +2,7 @@ name: "Ankith Babu Joseph"
 title: "Data Analyst"
 email: "ankithbjoseph@gmail.com"
 phone: "+353 89 983 2315"
-website: "https://ankithbjoseph.github.io"
+website: "https://cv.ankithjoseph.com"
 github: "github.com/ankithbjoseph"
 linkedin: "linkedin.com/in/ankith-b-joseph"
 location: "Dublin, Ireland"
@@ -121,7 +121,7 @@ education:
       - Engineering Mathematics
       - Systems Analysis
       - Problem Solving
-    description: 'CGPA: 7.56/10'
+    description: "CGPA: 7.56/10"
 certifications:
   - name: CAIIB (Information Technology)
     issuer: Indian Institute of Banking & Finance
@@ -142,7 +142,7 @@ projects:
       - VMD
       - FAN
       - Research
-    date: '2024'
+    date: "2024"
     description: Master's thesis developing a novel hybrid model combining Variational Mode Decomposition (VMD) and Fourier Analysis Networks (FAN) for accurate Air Quality Index forecasting. Achieved 1.49% MAPE on Taiwan air quality data, outperforming baseline models.
     longDescription: |
       This research project proposes a novel VMD-FAN hybrid model for forecasting Air Quality Index (AQI) time series data. The model addresses the complexity and non-stationary nature of AQI data by combining two powerful techniques:
@@ -163,7 +163,7 @@ projects:
       - Environmental Data
       - Visualization
       - Team Project
-    date: '2024'
+    date: "2024"
     description: Interactive dashboard exploring the relationship between environmental factors (weather, air quality) and pedestrian footfall across 20+ Dublin city locations. Analyzed temperature, humidity, precipitation, AQI metrics, and pedestrian counter data.
     longDescription: |
       A collaborative Data Analytics Project (DAP) that investigates how environmental conditions influence pedestrian movement patterns in Dublin city. The project features an interactive dashboard built to visualize and analyze:

@@ -60,8 +60,11 @@ const phoneHref = resumeData.phone.replace(/\s+/g, "");
   {/* Availability status */}
   <div class="flex items-center gap-2 mb-5">
     <span class="relative flex h-2 w-2 flex-shrink-0">
-      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
-      <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+      <span
+        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"
+      ></span>
+      <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"
+      ></span>
     </span>
     <span class="text-xs text-slate-500">Open to opportunities</span>
   </div>
@@ -192,18 +195,22 @@ const phoneHref = resumeData.phone.replace(/\s+/g, "");
   </div>
 </aside>
 
-<script is:inline define:vars={{ email: resumeData.email, github: resumeData.github }}>
-  /* Console easter egg — for the technical visitors who open DevTools */
+<script
+  is:inline
+  define:vars={{
+    linkedin: resumeData.linkedin,
+  }}
+>
+  // Console easter egg — a small hello for whoever opens DevTools.
+
+  const brandChip =
+    "background:#2563eb;color:#fff;font-weight:700;padding:5px 12px;border-radius:6px;";
+
   console.log(
-    '%cAnkith Babu Joseph — Data Analyst',
-    'font-size:13px;font-weight:700;color:#2563eb;font-family:ui-monospace,monospace;padding:4px 0'
+    "%c\u{1F44B} You opened the console. I like the curiosity.",
+    brandChip,
   );
-  console.log(
-    '%cYou found the source layer.\n\nBuilt with Astro v5, Tailwind CSS, and a YAML file as the single\nsource of truth for all content. The CV PDF generates from a\nTypst template via a build script that runs before every deploy.\n\nIf the attention to detail appeals to you, reach out:\n%c' + email + '\n%cgithub.com/' + github.replace('github.com/', ''),
-    'color:#475569;font-family:ui-monospace,monospace;font-size:11px;line-height:1.7',
-    'color:#2563eb;font-family:ui-monospace,monospace;font-size:11px',
-    'color:#94a3b8;font-family:ui-monospace,monospace;font-size:11px'
-  );
+  console.log(`Let's connect \u{2014} \u{1F4BC} https://${linkedin}`);
 </script>
 
 <style>
@@ -217,8 +224,9 @@ const phoneHref = resumeData.phone.replace(/\s+/g, "");
 
   /* Upgrade icon button hover to proper easing */
   :global(.w-10.h-10.rounded-full) {
-    transition: background-color 180ms cubic-bezier(0.25, 1, 0.5, 1),
-                color 180ms cubic-bezier(0.25, 1, 0.5, 1);
+    transition:
+      background-color 180ms cubic-bezier(0.25, 1, 0.5, 1),
+      color 180ms cubic-bezier(0.25, 1, 0.5, 1);
   }
 
   @media (prefers-reduced-motion: reduce) {
