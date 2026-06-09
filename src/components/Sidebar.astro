@@ -32,8 +32,9 @@ const keySkills = resumeData.skills
 const phoneHref = resumeData.phone.replace(/\s+/g, "");
 ---
 
+<div class="lg:col-span-4 lg:sticky lg:top-12 lg:self-start">
 <aside
-  class="lg:col-span-4 lg:sticky lg:top-8 lg:self-start bg-white rounded-2xl border border-slate-200 p-6 shadow-sm sidebar-enter"
+  class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm sidebar-enter"
 >
   {/* Profile Photo */}
   <div class="mb-6">
@@ -75,7 +76,7 @@ const phoneHref = resumeData.phone.replace(/\s+/g, "");
       href={`https://${resumeData.linkedin}`}
       target="_blank"
       rel="noopener noreferrer"
-      class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all"
+      class="w-11 h-11 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all"
       aria-label="LinkedIn"
     >
       <svg
@@ -93,7 +94,7 @@ const phoneHref = resumeData.phone.replace(/\s+/g, "");
       href={`https://${resumeData.github}`}
       target="_blank"
       rel="noopener noreferrer"
-      class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-slate-900 hover:text-white transition-all"
+      class="w-11 h-11 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-slate-900 hover:text-white transition-all"
       aria-label="GitHub"
     >
       <svg
@@ -109,7 +110,7 @@ const phoneHref = resumeData.phone.replace(/\s+/g, "");
     </a>
     <a
       href={`mailto:${resumeData.email}`}
-      class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-rose-500 hover:text-white transition-all"
+      class="w-11 h-11 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-rose-500 hover:text-white transition-all"
       aria-label="Email"
     >
       <svg
@@ -128,7 +129,7 @@ const phoneHref = resumeData.phone.replace(/\s+/g, "");
     </a>
     <a
       href={`tel:${phoneHref}`}
-      class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-green-500 hover:text-white transition-all"
+      class="w-11 h-11 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-green-500 hover:text-white transition-all"
       aria-label="Phone"
     >
       <svg
@@ -150,7 +151,7 @@ const phoneHref = resumeData.phone.replace(/\s+/g, "");
       href={`${import.meta.env.BASE_URL}${pdfFileName}`}
       target="_blank"
       rel="noopener noreferrer"
-      class="h-10 px-4 flex items-center gap-2 rounded-full bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-all shadow-md hover:shadow-lg"
+      class="h-11 px-4 flex items-center gap-2 rounded-full bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-all shadow-md hover:shadow-lg"
       aria-label="Download CV"
     >
       <svg
@@ -176,17 +177,17 @@ const phoneHref = resumeData.phone.replace(/\s+/g, "");
 
   {/* About Section */}
   <div class="mb-10">
-    <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">
+    <h2 class="text-lg font-bold text-slate-900 tracking-tight text-balance pb-3 mb-4 border-b border-slate-100">
       About
     </h2>
-    <p class="text-sm text-slate-600 leading-relaxed">
+    <p class="text-base text-slate-600 leading-relaxed text-pretty">
       {resumeData.summary}
     </p>
   </div>
 
   {/* Skills Section */}
   <div>
-    <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">
+    <h2 class="text-lg font-bold text-slate-900 tracking-tight text-balance pb-3 mb-4 border-b border-slate-100">
       Skills
     </h2>
     <div class="flex flex-wrap gap-2">
@@ -194,6 +195,7 @@ const phoneHref = resumeData.phone.replace(/\s+/g, "");
     </div>
   </div>
 </aside>
+</div>
 
 <script
   is:inline
@@ -222,8 +224,9 @@ const phoneHref = resumeData.phone.replace(/\s+/g, "");
     animation: scale-up-in 520ms cubic-bezier(0.25, 1, 0.5, 1) 140ms both;
   }
 
+
   /* Upgrade icon button hover to proper easing */
-  :global(.w-10.h-10.rounded-full) {
+  :global(.w-11.h-11.rounded-full) {
     transition:
       background-color 180ms cubic-bezier(0.25, 1, 0.5, 1),
       color 180ms cubic-bezier(0.25, 1, 0.5, 1);

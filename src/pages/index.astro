@@ -30,9 +30,11 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                 id="projects"
                 class="mb-16 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm scroll-mt-8"
               >
-                <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-8">
+
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight text-balance pb-4 mb-6 border-b border-slate-100">
                   Projects
                 </h2>
+
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {resumeData.projects.map((project: any, index: number) => (
@@ -77,7 +79,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                             {project.name}
                           </h3>
                           {project.date && (
-                            <span class="text-[10px] font-medium text-slate-400 whitespace-nowrap border border-slate-100 px-1.5 py-0.5 rounded-full bg-slate-50">
+                            <span class="text-xs font-medium text-slate-500 whitespace-nowrap border border-slate-100 px-1.5 py-0.5 rounded-full bg-slate-50">
                               {project.date}
                             </span>
                           )}
@@ -135,7 +137,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
             class="mb-16 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm scroll-mt-8"
           >
             <h2
-              class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-8"
+              class="text-2xl font-bold text-slate-900 tracking-tight text-balance pb-4 mb-6 border-b border-slate-100"
             >
               Experience
             </h2>
@@ -179,7 +181,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                       <p class="text-blue-600 font-medium">{job.company}</p>
                     )}
                     <p class="text-sm text-slate-500 mb-3">{job.location}</p>
-                    <p class="text-sm text-slate-600 leading-relaxed whitespace-pre-line">
+                    <p class="text-base text-slate-600 leading-relaxed whitespace-pre-line text-pretty">
                       {job.description}
                     </p>
                     {/* Skills tags */}
@@ -202,7 +204,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
             class="mb-16 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm scroll-mt-8"
           >
             <h2
-              class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-8"
+              class="text-2xl font-bold text-slate-900 tracking-tight text-balance pb-4 mb-6 border-b border-slate-100"
             >
               Education
             </h2>
@@ -246,7 +248,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                       <p class="text-blue-600 font-medium">{edu.institution}</p>
                     )}
                     <p class="text-sm text-slate-500 mb-3">{edu.location}</p>
-                    <p class="text-sm text-slate-600 leading-relaxed">
+                    <p class="text-base text-slate-600 leading-relaxed text-pretty">
                       {edu.description}
                     </p>
                     {edu.tags && edu.tags.length > 0 && (
@@ -270,7 +272,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                   id="certifications"
                   class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm scroll-mt-8"
                 >
-                  <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-8">
+                  <h2 class="text-2xl font-bold text-slate-900 tracking-tight text-balance pb-4 mb-6 border-b border-slate-100">
                     Certifications
                   </h2>
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -282,7 +284,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                           rel="noopener noreferrer"
                           data-reveal-stagger
                           style={`--i: ${index % 2}`}
-                          class="p-5 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl border border-slate-200 hover:shadow-md transition-shadow hover:translate-x-0.5 group"
+                          class="p-5 bg-slate-50 rounded-xl border border-slate-200 hover:shadow-md transition-shadow hover:translate-x-0.5 group"
                           aria-label={`Open certificate: ${cert.name}`}
                         >
                           <h3 class="font-semibold text-slate-900">
@@ -291,7 +293,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                           <div class="mt-2 flex items-center justify-between gap-2">
                             <p class="text-sm text-slate-600">{cert.issuer}</p>
                             {cert.date && (
-                              <span class="text-[10px] font-medium text-slate-400 whitespace-nowrap border border-slate-100 px-1.5 py-0.5 rounded-full bg-slate-50">
+                              <span class="text-xs font-medium text-slate-500 whitespace-nowrap border border-slate-100 px-1.5 py-0.5 rounded-full bg-slate-50">
                                 {cert.date}
                               </span>
                             )}
@@ -320,7 +322,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                         <div
                           data-reveal-stagger
                           style={`--i: ${index % 2}`}
-                          class="p-5 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl border border-slate-200 hover:shadow-md transition-shadow"
+                          class="p-5 bg-slate-50 rounded-xl border border-slate-200 hover:shadow-md transition-shadow"
                         >
                           <h3 class="font-semibold text-slate-900">
                             {cert.name}
@@ -328,7 +330,7 @@ const colorClasses = ["bg-slate-700", "bg-indigo-800", "bg-zinc-800"];
                           <div class="mt-2 flex items-center justify-between gap-2">
                             <p class="text-sm text-slate-600">{cert.issuer}</p>
                             {cert.date && (
-                              <span class="text-[10px] font-medium text-slate-400 whitespace-nowrap border border-slate-100 px-1.5 py-0.5 rounded-full bg-slate-50">
+                              <span class="text-xs font-medium text-slate-500 whitespace-nowrap border border-slate-100 px-1.5 py-0.5 rounded-full bg-slate-50">
                                 {cert.date}
                               </span>
                             )}

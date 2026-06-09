@@ -31,6 +31,12 @@ const { title } = Astro.props;
     <title>{title}</title>
     <script is:inline>document.documentElement.classList.add('js-ready');</script>
     <style is:global>
+      :focus-visible {
+        outline: 2px solid #2563eb;
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
+
       :root {
         --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
         --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -117,5 +123,6 @@ const { title } = Astro.props;
         });
       })();
     </script>
-  </body>
+  
+</body>
 </html>
