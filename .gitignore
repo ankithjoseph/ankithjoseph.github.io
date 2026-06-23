@@ -12,3 +12,6 @@ PRODUCT.md
 data/*.bak
 scripts/admin-server.js
 scripts/admin-ui/
+.serena
+.claude/
+CLAUDE.md
