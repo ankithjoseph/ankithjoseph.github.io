@@ -1,38 +1,42 @@
-name: Ankith Babu Joseph
+name: Ankith Joseph
 title: Data Analyst
+headline: Data Analyst | MSc Graduate (1:1) | 8+ Years Banking Experience
 email: ankithbjoseph@gmail.com
 phone: +353 89 983 2315
-website: https://cv.ankithjoseph.com
+website: https://ankithjoseph.com
 github: github.com/ankithbjoseph
 linkedin: linkedin.com/in/ankith-b-joseph
 location: Dublin, Ireland
 summary: |
-  Master's in Data Analytics graduate with 8+ years of professional experience in banking and data operations. Proficient in Python, R, SQL, Tableau, and Power BI. Skilled at turning data into clear insights that support business decisions and improve efficiency.
+  MSc Data Analytics graduate (1:1 Honours) with 8+ years of banking experience across operations and team leadership. Proven track record of leveraging data to drive efficiency, including automating workflows to reduce reporting time by 20%. Eligible to work in Ireland (Stamp 1G).
 skills:
-  - category: Data Analysis & Programming
+  - category: Programming
     items:
-      - Python (Pandas, NumPy, Scikit-learn)
+      - Python (Pandas, NumPy, scikit-learn)
       - R
       - SQL
+  - category: Analytics & ML
+    items:
+      - Statistical Analysis
+      - Machine Learning
+      - Time-Series Forecasting
+      - Data Cleaning
+  - category: Visualization & BI
+    items:
       - Tableau
       - Power BI
-  - category: Web Technologies
-    items:
-      - HTML5
-      - CSS3
-      - JavaScript
-      - Git/GitHub
-  - category: Tools & Software
-    items:
       - Microsoft Excel (Advanced)
-      - Visual Studio Code
-      - Jupyter Notebooks
-  - category: Soft Skills
+  - category: Tools & Workflow
     items:
-      - Strategic Planning
+      - Jupyter Notebooks
+      - Git/GitHub
+      - Visual Studio Code
+      - HTML/CSS/JavaScript
+  - category: Leadership
+    items:
       - Team Leadership
       - Stakeholder Management
-      - Problem Solving
+      - Strategic Planning
   - category: Languages
     items:
       - English (Fluent)
@@ -110,6 +114,7 @@ education:
       - Statistics
       - Python
       - R
+    highlight: true
     description: First-Class Honours (1:1)
   - degree: B.Tech in Mechanical Engineering
     institution: Federal Institute of Science And Technology
@@ -134,6 +139,16 @@ projects:
     image: /images/aqi-forecasting.png
     url: https://github.com/ankithbjoseph/vmd-fan
     demo: https://norma.ncirl.ie/8677/
+    demoLabel: Published Thesis
+    stack:
+      - Python
+      - Machine Learning
+      - Time-Series Forecasting
+      - VMD
+      - Fourier Analysis Networks
+    highlights:
+      - Decomposed non-stationary AQI signals with Variational Mode Decomposition (VMD) and modelled periodicity using Fourier Analysis Networks (FAN).
+      - Validated generalisability across multiple Taiwan cities (MAE 0.72, MSE 1.35, RMSE 1.16).
     tags:
       - Machine Learning
       - Python
@@ -155,6 +170,15 @@ projects:
     image: /images/dap-dashboard.png
     url: https://github.com/ankithbjoseph/TeamAA_DAP_JAN2024
     demo: https://dashboard.projectdap.ankithjoseph.com/dashboard
+    demoLabel: Live Dashboard
+    stack:
+      - Python
+      - Data Analytics
+      - Data Visualization
+      - Interactive Dashboard
+    highlights:
+      - Integrated 10+ weather variables and air-quality metrics (PM10, PM2.5, NO2, SO2) against pedestrian counts at 20+ Dublin locations.
+      - Built and deployed an interactive dashboard as a 3-person team project.
     tags:
       - Data Analytics
       - Python

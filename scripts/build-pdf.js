@@ -22,7 +22,7 @@ const OUTPUT_FILE = path.join(PUBLIC_DIR, fileName);
 if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true });
 
 // ── Layout tokens ────────────────────────────────────────────────────────────
-const ACCENT = '#2563eb';
+const ACCENT = '#374151'; // charcoal gray — name + section headings
 const GRAY = '#4b5563';
 const BLACK = '#111827';
 
@@ -33,12 +33,11 @@ const FONT_ITALIC = 'Inter-Italic';
 const ML = 50;                 // left margin
 const MR = 50;                 // right margin
 const MT = 45;                 // top margin
-const MB = 60;                 // bottom margin (leaves room for the footer band)
+const MB = 45;                 // bottom margin
 const PAGE_W = 612;            // US Letter width (pt)
 const PAGE_H = 792;            // US Letter height (pt)
 const CW = PAGE_W - ML - MR;   // content width
 const BOTTOM_LIMIT = PAGE_H - MB; // y past which a block should spill to a new page
-const FOOTER_Y = PAGE_H - 27;  // footer baseline, inside the bottom margin
 
 const doc = new PDFDocument({
     size: 'LETTER',
@@ -105,21 +104,20 @@ function renderBullets(description) {
         ensureSpace(20);
         const y = doc.y;
         doc.font(FONT).fontSize(9.5).fillColor(GRAY).text('•', ML, y, { width: BULLET_INDENT });
-        doc.font(FONT).fontSize(9.5).fillColor(BLACK)
+        doc.font(FONT).fontSize(10).fillColor(BLACK)
             .text(text, ML + BULLET_INDENT, y, { width: CW - BULLET_INDENT, lineGap: 1 });
     }
 }
 
-// Centered line of contact items; linked items render in the accent color.
-// Segments are positioned manually — PDFKit re-centers each `continued`
-// fragment independently, which would overlap them.
+// Left-aligned line of contact items; linked items render in the accent color.
+// Segments are positioned manually so each can carry its own color and link
+// without PDFKit's per-fragment layout overlapping them.
 function contactLine(items) {
     doc.font(FONT).fontSize(9);
     const sep = '   ·   ';
     const sepW = doc.widthOfString(sep);
     const widths = items.map((it) => doc.widthOfString(it.text));
-    const totalW = widths.reduce((a, b) => a + b, 0) + sepW * (items.length - 1);
-    let x = ML + (CW - totalW) / 2;
+    let x = ML;
     const y = doc.y;
     const lh = doc.currentLineHeight();
     items.forEach((it, idx) => {
@@ -139,17 +137,17 @@ function contactLine(items) {
 
 const phoneHref = resume.phone.replace(/\s+/g, '');
 
-doc.font(FONT_BOLD).fontSize(22).fillColor(BLACK).text(resume.name, { align: 'center' });
+doc.font(FONT_BOLD).fontSize(22).fillColor(BLACK).text(resume.name, ML, doc.y, { width: CW, align: 'left' });
 doc.moveDown(0.1);
-doc.font(FONT_BOLD).fontSize(12).fillColor(ACCENT).text(resume.title, { align: 'center' });
-doc.moveDown(0.35);
+doc.font(FONT_BOLD).fontSize(11).fillColor(ACCENT).text(resume.headline || resume.title, ML, doc.y, { width: CW, align: 'left' });
+doc.moveDown(0.45);
 
 contactLine([
     { text: resume.email, link: `mailto:${resume.email}` },
     { text: resume.phone, link: `tel:${phoneHref}` },
     { text: resume.location },
 ]);
-doc.moveDown(0.15);
+doc.moveDown(0.3);
 contactLine([
     { text: resume.linkedin, link: `https://${resume.linkedin}` },
     { text: resume.github, link: `https://${resume.github}` },
@@ -159,13 +157,33 @@ contactLine([
 // ── SUMMARY ──────────────────────────────────────────────────────────────────
 
 sectionTitle('Professional Summary');
-doc.font(FONT).fontSize(9.5).fillColor(BLACK).text(resume.summary.trim(), ML, doc.y, { width: CW, lineGap: 1.5 });
+doc.font(FONT).fontSize(10).fillColor(BLACK).text(resume.summary.trim(), ML, doc.y, { width: CW, lineGap: 1.5 });
+
+// ── SKILLS ───────────────────────────────────────────────────────────────────
+
+sectionTitle('Technical Skills');
+const LABEL_W = 108;
+for (const cat of resume.skills) {
+    ensureSpace(26);
+    const y = doc.y;
+    doc.font(FONT_BOLD).fontSize(10).fillColor(BLACK).text(cat.category + ':', ML, y, { width: LABEL_W });
+    const afterLabel = doc.y;
+    doc.font(FONT).fontSize(10).fillColor(BLACK).text(cat.items.join(', '), ML + LABEL_W, y, { width: CW - LABEL_W });
+    doc.y = Math.max(afterLabel, doc.y) + 2;
+}
 
 // ── EXPERIENCE ───────────────────────────────────────────────────────────────
 
 sectionTitle('Professional Experience');
 for (const job of resume.experience) {
-    ensureSpace(58);
+    // Measure the full entry so a job's bullets never orphan across a page break.
+    doc.font(FONT).fontSize(10);
+    let jobNeeded = 30;
+    for (const raw of job.description.trim().split('\n')) {
+        const t = raw.trim();
+        if (t) jobNeeded += doc.heightOfString(t.startsWith('- ') ? t.slice(2) : t, { width: CW - BULLET_INDENT, lineGap: 1 });
+    }
+    ensureSpace(jobNeeded);
     twoCol(job.role, `${job.start} – ${job.end}`, FONT_BOLD, 11, BLACK, FONT, 9, GRAY);
     twoCol(job.company, job.location, FONT_ITALIC, 9, GRAY, FONT_ITALIC, 9, GRAY);
     doc.moveDown(0.2);
@@ -182,22 +200,15 @@ for (const edu of resume.education) {
     twoCol(edu.institution, edu.location, FONT_ITALIC, 9, GRAY, FONT_ITALIC, 9, GRAY);
     if (edu.description) {
         doc.moveDown(0.15);
-        doc.font(FONT).fontSize(9).fillColor(GRAY).text(edu.description, ML, doc.y, { width: CW });
+        const descFont = edu.highlight ? FONT_BOLD : FONT;
+        const descColor = edu.highlight ? BLACK : GRAY;
+        doc.font(descFont).fontSize(9.5).fillColor(descColor).text(edu.description, ML, doc.y, { width: CW });
+    }
+    if (edu.highlight && edu.tags?.length) {
+        doc.moveDown(0.12);
+        doc.font(FONT_ITALIC).fontSize(8.5).fillColor(GRAY).text(`Relevant coursework: ${edu.tags.join(' · ')}`, ML, doc.y, { width: CW });
     }
     doc.moveDown(0.45);
-}
-
-// ── SKILLS ───────────────────────────────────────────────────────────────────
-
-sectionTitle('Technical Skills');
-const LABEL_W = 145;
-for (const cat of resume.skills) {
-    ensureSpace(26);
-    const y = doc.y;
-    doc.font(FONT_BOLD).fontSize(9.5).fillColor(BLACK).text(cat.category + ':', ML, y, { width: LABEL_W });
-    const afterLabel = doc.y;
-    doc.font(FONT).fontSize(9.5).fillColor(BLACK).text(cat.items.join(', '), ML + LABEL_W, y, { width: CW - LABEL_W });
-    doc.y = Math.max(afterLabel, doc.y) + 2;
 }
 
 // ── PROJECTS ─────────────────────────────────────────────────────────────────
@@ -205,15 +216,31 @@ for (const cat of resume.skills) {
 if (resume.projects?.length) {
     sectionTitle('Key Projects');
     for (const proj of resume.projects) {
-        ensureSpace(42);
-        if (proj.url) {
-            doc.font(FONT_BOLD).fontSize(10).fillColor(BLACK).text(proj.name, ML, doc.y, { continued: true, width: CW });
-            doc.font(FONT).fontSize(9).fillColor(ACCENT).text(`  |  ${proj.url}`, { link: proj.url, underline: true, width: CW });
-        } else {
-            doc.font(FONT_BOLD).fontSize(10).fillColor(BLACK).text(proj.name, ML, doc.y, { width: CW });
+        ensureSpace(96);
+        // Project name on its own line; repo + demo links on the line below.
+        doc.font(FONT_BOLD).fontSize(10).fillColor(BLACK).text(proj.name, ML, doc.y, { width: CW });
+        if (proj.url || proj.demo) {
+            doc.font(FONT).fontSize(8.5);
+            if (proj.url) {
+                const repo = proj.url.replace(/^https?:\/\//, '');
+                doc.fillColor(ACCENT).text(repo, ML, doc.y, { link: proj.url, continued: !!proj.demo });
+            }
+            if (proj.demo) {
+                if (proj.url) doc.fillColor(GRAY).text('   ·   ', { continued: true });
+                doc.fillColor(ACCENT).text(proj.demoLabel || 'Live Demo', { link: proj.demo });
+            }
+            doc.moveDown(0.15);
         }
-        doc.font(FONT).fontSize(9.5).fillColor(BLACK).text(proj.description.trim(), ML, doc.y, { width: CW, lineGap: 1 });
-        doc.moveDown(0.45);
+        doc.font(FONT).fontSize(10).fillColor(BLACK).text(proj.description.trim(), ML, doc.y, { width: CW, lineGap: 1 });
+        if (proj.highlights?.length) {
+            doc.moveDown(0.12);
+            renderBullets(proj.highlights.map((h) => `- ${h}`).join('\n'));
+        }
+        if (proj.stack?.length) {
+            doc.moveDown(0.1);
+            doc.font(FONT_ITALIC).fontSize(8.5).fillColor(GRAY).text(`Tech: ${proj.stack.join(' · ')}`, ML, doc.y, { width: CW });
+        }
+        doc.moveDown(0.5);
     }
 }
 
@@ -240,24 +267,22 @@ if (resume.certifications?.length) {
     }
 }
 
-// ── FOOTER (page number, generation date, live-site link) ────────────────────
-
-const dateStr = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-const range = doc.bufferedPageRange();
-for (let i = range.start; i < range.start + range.count; i++) {
-    doc.switchToPage(i);
-    // Zero the bottom margin while stamping so footer text placed in the margin
-    // band doesn't trip PDFKit's overflow check and spawn blank pages.
-    const prevBottom = doc.page.margins.bottom;
-    doc.page.margins.bottom = 0;
-    doc.font(FONT).fontSize(7.5).fillColor(GRAY);
-    doc.text(`Generated ${dateStr}`, ML, FOOTER_Y, { width: CW, align: 'left', lineBreak: false });
-    doc.text(resume.website.replace(/^https?:\/\//, ''), ML, FOOTER_Y, { width: CW, align: 'center', link: resume.website, lineBreak: false });
-    doc.text(`Page ${i + 1} of ${range.count}`, ML, FOOTER_Y, { width: CW, align: 'right', lineBreak: false });
-    doc.page.margins.bottom = prevBottom;
-}
-
 // ── FINISH ───────────────────────────────────────────────────────────────────
+
+// Stamp a subtle page number (bottom-right) on each page, only when multi-page.
+const pages = doc.bufferedPageRange();
+if (pages.count > 1) {
+    const FOOTER_Y = PAGE_H - 30;
+    for (let i = pages.start; i < pages.start + pages.count; i++) {
+        doc.switchToPage(i);
+        // Zero the bottom margin while stamping so margin-band text doesn't spawn a blank page.
+        const prevBottom = doc.page.margins.bottom;
+        doc.page.margins.bottom = 0;
+        doc.font(FONT).fontSize(8).fillColor('#9ca3af')
+            .text(`${i + 1} / ${pages.count}`, ML, FOOTER_Y, { width: CW, align: 'right', lineBreak: false });
+        doc.page.margins.bottom = prevBottom;
+    }
+}
 
 doc.end();
 
