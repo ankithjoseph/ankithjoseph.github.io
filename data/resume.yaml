@@ -12,7 +12,7 @@ summary: |
 skills:
   - category: Programming
     items:
-      - Python (Pandas, NumPy, scikit-learn)
+      - Python
       - R
       - SQL
   - category: Analytics & ML
