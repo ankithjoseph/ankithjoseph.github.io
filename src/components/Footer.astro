@@ -1,6 +1,7 @@
 ---
 import fs from "fs";
 import yaml from "js-yaml";
+import { safeUrl } from "../lib/safeUrl.js";
 // Load resume data for name and socials
 const resumeData = yaml.load(
   fs.readFileSync("data/resume.yaml", "utf8"),
@@ -73,7 +74,7 @@ const socials: { label: string; url?: string; icon: string; aria: string }[] = [
           socials
             .filter((s) => s.url)
             .map((s) => {
-              const url = s.url as string; // after filter, url is defined
+              const url = safeUrl(s.url as string); // sanitize YAML-sourced URL
               const isMail = url.startsWith("mailto:");
               return (
                 <a

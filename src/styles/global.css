@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Preserve the project's theme extensions (Inter font, custom durations/
+   easings) defined in the legacy JS config. Tailwind v4 auto-detects content,
+   so the config's `content` array is ignored — only `theme.extend` is used. */
+@config "../../tailwind.config.mjs";
